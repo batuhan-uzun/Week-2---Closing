@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Merhaba\nNasılsın ?\nİyiyim\nSen nasılsın ?"); // Soru 1
+Console.WriteLine("Merhaba\nNasılsın ?\nİyiyim\nSen nasılsın ?"); // Soru 1
 
 Console.WriteLine($"Metinsel veri: {Console.ReadLine()} Sayılar veri: {Convert.ToInt32(Console.ReadLine())}"); // Soru 2
 
@@ -47,7 +47,7 @@ string StringToBool(bool trueFalse) // Soru 10
         return "False girildi";
 }
 
-Console.WriteLine("True ya da false değeri giriniz"); // Soru 11
+Console.WriteLine("True ya da false değeri giriniz");
 string input = Console.ReadLine();
 bool confirmBool;
 while (!bool.TryParse(input, out confirmBool))
@@ -59,13 +59,28 @@ while (!bool.TryParse(input, out confirmBool))
 string result = StringToBool(confirmBool);
 Console.WriteLine($"Sonuç: {result}");
 
-int Ages(int age1, int age2, int age3) // Soru 12
+int Ages(int age1, int age2, int age3) // Soru 11
 {
     return Math.Max(age1, Math.Max(age2, age3));
 }
 
 Console.WriteLine("Lütfen 3 adet yaş giriniz");
 Console.WriteLine($"{Ages(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()))}");
+
+void SelectMax() // Soru 12
+{
+    int number;
+    int max = 0;
+    while (true)
+    {
+        Console.WriteLine("Sayı giriniz: ");
+        number = Convert.ToInt32(Console.ReadLine());
+        if (number > max)
+            max = number;
+        Console.WriteLine($"Girilen sayıların arasında en büyük değer: {max}");
+    }
+}
+SelectMax();
 
 void Swap(ref string first, ref string second) // Soru 13
 {
@@ -107,7 +122,3 @@ Console.WriteLine("Zaman bir GeRi SayIm".ToLower() + "\nZaman bir GeRi SayIm".To
 string text = "    Selamlar   "; // Soru 18
 text = text.Trim();
 Console.WriteLine(text);
-
-
-
-
