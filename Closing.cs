@@ -1,8 +1,6 @@
 ﻿Console.WriteLine("Merhaba\nNasılsın ?\nİyiyim\nSen nasılsın ?"); // Soru 1
 
-string metin = Console.ReadLine(); // Soru 2
-int sayi = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Metinsel veri: {metin} Sayılar veri: {sayi}");
+Console.WriteLine($"Metinsel veri: {Console.ReadLine()} Sayılar veri: {Convert.ToInt32(Console.ReadLine())}"); // Soru 2
 
 Random rnd = new Random(); // Soru 3
 Console.WriteLine($"Üretilen rastgele sayı: {rnd.Next(0, 100)}");
@@ -23,11 +21,11 @@ for (int i = 0; i < 10; i++) // Soru 6
 }
 
 Console.WriteLine("2 adet ad-soyad giriniz"); // Soru 7
-string str1, str2, temp;
-str1 = Console.ReadLine();
-str2 = Console.ReadLine();
-temp = str1; str1 = str2; str2 = temp;
-Console.WriteLine($"Girilen ad-soyad sıralaması: {str1} ve {str2}");
+string name1, name2, temp;
+name1 = Console.ReadLine();
+name2 = Console.ReadLine();
+temp = name1; name1 = name2; name2 = temp;
+Console.WriteLine($"Girilen ad-soyad sıralaması: {name1} ve {name2}");
 
 void BenDegerDondurmem() // Soru 8
 {
